@@ -168,6 +168,7 @@ a:focus {
   color: #ffffff;
 }
 
+
 /* Layout styling */
 .container {
   padding: 0 15px
@@ -245,10 +246,17 @@ main {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+.social {
+  margin-right: 10px;
+}
+.social:hover {text-decoration: none;}
+.social svg {width: 40px;}
+
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {}
+@media only screen and (min-width: 640px) {
 
 [class*="col-"] {
   float: left;
@@ -283,6 +291,8 @@ nav {
 
 .col-md-6 {
   width: 50%;
+}
+
 }
 
 
