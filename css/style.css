@@ -1,0 +1,297 @@
+/*
+Colors used:
+Primary Color (Blue): #05676e;
+Secondary Color (Green): #489c79;
+*/
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ffe4c4;
+  text-align: center;
+  padding: 10px 0;
+  /* margin: 10px; */
+  border-bottom: 3px solid #4a4a4a;
+  box-shadow: -webkit-box-shadow: 4px 4px 6px 0px rgba(36, 36, 36, 0.73);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(36, 36, 36, 0.73);
+  box-shadow: 4px 4px 6px 0px rgba(36, 36, 36, 0.73);
+  position: fixed;
+  width: 100%
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  /* Sets the font size to 16px */
+  font-weight: 300;
+  /* Sets the font weight to 300 */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 * the font-size */
+  color: #4a4a4a;
+}
+
+/* NAV formatting */
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+nav>ul>li>a:visited {
+  color: #ff7f50;
+}
+
+nav>ul>li>a:hover {
+  color: #cc6540;
+  text-decoration: underline;
+}
+
+nav>ul>li>a:active {
+  color: #994c30;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #ff7f50;
+  text-decoration: none;
+  /* No underlining */
+}
+
+a:hover {
+  color: #cc6540;
+  text-decoration: underline;
+  /* Underlining when hovering over a link */
+}
+
+a:visited {
+  /* visited link */
+  color: #ff7f50;
+}
+
+a:active {
+  /* selected link */
+  color: #994c30;
+}
+
+a:hover,
+a:focus {
+  color: #cc6540;
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #ff7f50;
+  color: white;
+  /* needed to override the default link color */
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30;
+  /* width of the border, type, color */
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+.button:hover {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button:active {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #ff7f50;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+
+.button.contact:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+
+.button.contact:active {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+
+/* Layout styling */
+.container {
+  padding: 0 15px
+}
+
+.row {
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+/* HERO section styling  */
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+#hero span {
+  display: block;
+}
+
+#hero {
+  background-color: #ffe4c4;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  margin: 10px;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+main {
+  padding-top: 133px;
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header {
+  text-align: unset;
+  padding: 20px 0 13px;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 4px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {}
