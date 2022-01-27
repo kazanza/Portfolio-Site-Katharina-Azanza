@@ -101,12 +101,6 @@ a {
   /* No underlining */
 }
 
-a:hover {
-  color: #cc6540;
-  text-decoration: underline;
-  /* Underlining when hovering over a link */
-}
-
 a:visited {
   /* visited link */
   color: #ff7f50;
@@ -121,6 +115,7 @@ a:hover,
 a:focus {
   color: #cc6540;
   text-decoration: underline;
+  /* Underlining when hovering over a link */
 }
 
 .button {
@@ -149,6 +144,11 @@ a:focus {
   opacity: 0.8;
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
+}
+
+.button:visited {
+  /* visited link */
+  color: #000000;
 }
 
 .button.contact {
