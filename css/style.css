@@ -9,8 +9,9 @@ Secondary Color (Green): #489c79;
 
 header {
   background-color: #ffe4c4;
-  text-align: center;
-  padding: 10px 0;
+
+  padding: 10px 0 4px;
+
   /* margin: 10px; */
   border-bottom: 3px solid #4a4a4a;
   box-shadow: -webkit-box-shadow: 4px 4px 6px 0px rgba(36, 36, 36, 0.73);
@@ -33,18 +34,45 @@ body {
 }
 
 /* NAV formatting */
-nav {
-  display: inline-block;
-  width: 100%;
-}
+
 
 nav>ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-nav>ul>li {
-  display: inline-block;
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
 }
 
 nav>ul>li>a {
@@ -203,11 +231,12 @@ a:focus {
 }
 
 .logo {
-  max-width: 250px;
+  /*max-width: 250px;*/
+  max-width: 150px;
 }
 
 main {
-  padding-top: 133px;
+  padding-top: 56px;
 }
 
 @keyframes color-change {
@@ -258,6 +287,7 @@ Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
 
+
 [class*="col-"] {
   float: left;
   padding: 10px;
@@ -291,6 +321,26 @@ nav {
 
 .col-md-6 {
   width: 50%;
+}
+
+.logo {
+  min-width: 641px
+}
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
+}
+
+nav > ul {
+  margin: 1em 0;
 }
 
 }
